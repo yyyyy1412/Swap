@@ -3,7 +3,7 @@ echo -e "\033[33m Your current swap is \033[0m"
 free -h
 mkdir /SwapDir
 cd /SwapDir
-dd if=/dev/zero of=/SwapDir/swap bs=1M count=4096M #这里增加的空间是512MB
+dd if=/dev/zero of=/SwapDir/swap bs=1M count=4096 #这里增加的空间是512MB
 chmod 0600 swap
 mkswap /SwapDir/swap #把这个分区变成swap分区
 swapon /SwapDir/swap #把刚建的swap分区设成为有效状态
